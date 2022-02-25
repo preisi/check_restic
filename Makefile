@@ -3,7 +3,7 @@
 all: check_restic
 
 check_restic: main.go
-	go build
+	CGO_ENABLED=0 go build
 
 clean:
 	rm -f check_restic
